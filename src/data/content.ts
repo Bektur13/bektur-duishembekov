@@ -157,7 +157,7 @@ export const about = {
     "I'm a Computer Science student at Bellevue College who likes owning a product end to end: designing the data model, building the API, and polishing the interface until it feels right.",
     "Before code, I spent years on the soccer pitch and won three national youth championships in the Kyrgyz Republic. The habits carried over: show up every day, drill the fundamentals, and play for the team.",
   ],
-  stats: [] satisfies Stat[],
+  stats: [] as Stat[], // add stat cards here, e.g. { value: "3", label: "Shipped projects" }
 };
 
 export const contact = {

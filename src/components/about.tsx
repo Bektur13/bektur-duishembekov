@@ -36,18 +36,20 @@ export function About() {
           </Reveal>
         </div>
 
-        <Stagger as="ul" className="mt-16 grid gap-4 sm:grid-cols-3">
-          {about.stats.map((stat) => (
-            <StaggerItem
-              as="li"
-              key={stat.label}
-              className="rounded-card border border-line bg-card p-6 transition-[transform,border-color] duration-300 hover:border-line-strong motion-safe:hover:-translate-y-1 sm:p-8"
-            >
-              <p className="text-5xl font-semibold tracking-[-0.04em]">{stat.value}</p>
-              <p className="mt-3 text-[15px] text-muted">{stat.label}</p>
-            </StaggerItem>
-          ))}
-        </Stagger>
+        {about.stats.length > 0 && (
+          <Stagger as="ul" className="mt-16 grid gap-4 sm:grid-cols-3">
+            {about.stats.map((stat) => (
+              <StaggerItem
+                as="li"
+                key={stat.label}
+                className="rounded-card border border-line bg-card p-6 transition-[transform,border-color] duration-300 hover:border-line-strong motion-safe:hover:-translate-y-1 sm:p-8"
+              >
+                <p className="text-5xl font-semibold tracking-[-0.04em]">{stat.value}</p>
+                <p className="mt-3 text-[15px] text-muted">{stat.label}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        )}
       </Container>
     </section>
   );
